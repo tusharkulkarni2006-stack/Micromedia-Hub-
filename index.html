@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MicroMedia Hub — Culture Media Database</title>
+<meta name="description" content="Searchable culture media reference for microbiology students.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="nav"><div class="logo">🧫 <b>MicroMedia</b> Hub</div>
+  <nav><a href="#home">Home</a><a href="#database">Database</a><a href="#finder">Finder</a><a href="#compare">Compare</a><a href="#quiz">MCQs</a><a href="#about">About</a></nav>
+  <button id="themeBtn" class="iconbtn" title="Toggle dark mode">◐</button></div>
+</header>
+<main>
+<section id="home" class="hero">
+ <div><span class="eyebrow">MICROBIOLOGY CULTURE MEDIA DATABASE</span>
+ <h1>Find the right <span>medium</span> faster.</h1>
+ <p>Search, filter and compare culture media by category, principle, common use and organism. Built as a student-friendly reference.</p>
+ <div class="search"><input id="search" placeholder="Search: MacConkey, fungi, Salmonella..." autocomplete="off"><button id="searchBtn">Search</button></div>
+ <div id="suggestions" class="suggestions"></div>
+ </div>
+ <div class="hero-card"><div class="plate">🧫</div><b>100+ media</b><small>starter database</small><div class="stats"><span><b id="statMedia">0</b><small>Media</small></span><span><b>6</b><small>Categories</small></span><span><b>2</b><small>Modes</small></span></div></div>
+</section>
+
+<section class="section" id="database">
+ <div class="title"><div><span class="eyebrow">EXPLORE</span><h2>Culture Media Database</h2></div><span id="count"></span></div>
+ <div class="toolbar">
+  <select id="category"><option value="all">All categories</option><option>General purpose</option><option>Selective</option><option>Differential</option><option>Enriched</option><option>Fungal</option><option>Enrichment</option><option>Transport</option></select>
+  <select id="sort"><option value="az">Name A–Z</option><option value="za">Name Z–A</option></select>
+  <button id="clear">Clear filters</button>
+ </div>
+ <div id="cards" class="grid"></div>
+</section>
+
+<section class="section compare" id="compare">
+ <div class="title"><div><span class="eyebrow">COMPARE</span><h2>Compare Media</h2><p>Select up to 3 media from the database.</p></div></div>
+ <div id="compareList" class="compare-list">No media selected.</div>
+ <div id="compareTable"></div>
+</section>
+
+
+<section class="section finder" id="finder">
+ <div class="title"><div><span class="eyebrow">SMART FINDER</span><h2>Organism → Media Finder</h2><p>Choose an organism or group to see relevant media in this educational database.</p></div></div>
+ <div class="finder-box"><select id="organismSelect"><option value="">Choose an organism/group</option>
+ <option>Salmonella</option><option>Staphylococci</option><option>Escherichia coli</option><option>Vibrio</option><option>Listeria</option><option>Campylobacter</option><option>Pseudomonas</option><option>Mycobacteria</option><option>Fungi and yeasts</option><option>Enteric Gram-negative bacteria</option><option>Fastidious bacteria</option><option>Anaerobic bacteria</option></select>
+ <button class="btn add" id="findBtn">Find media</button></div>
+ <div id="finderResults" class="finder-results"></div>
+ <div class="decision"><b>How to use this tool</b><span>Start with the organism/group, then review the medium's principle and intended use. Final media selection should follow the specimen, validated method and laboratory SOP.</span></div>
+</section>
+<section class="section quiz" id="quiz">
+ <div class="title"><div><span class="eyebrow">PRACTICE ZONE</span><h2>Microbiology MCQs</h2><p>Test your understanding of culture media.</p></div><span id="quizScore"></span></div>
+ <div id="quizBox" class="quizbox"></div>
+</section>
+<section class="section semesters" id="study">
+ <div class="title"><div><span class="eyebrow">STUDY ZONE</span><h2>B.Sc. Microbiology Study Areas</h2><p>Quick entry points for building semester-wise content later.</p></div></div>
+ <div class="semester-grid">
+  <div><b>🧫 Bacteriology</b><span>Culture media · staining · biochemical tests</span></div>
+  <div><b>🦠 Virology</b><span>Viruses · cultivation concepts · diagnostics</span></div>
+  <div><b>🍄 Mycology</b><span>Fungi · fungal media · morphology</span></div>
+  <div><b>🧬 Molecular Biology</b><span>DNA · PCR · electrophoresis · genetics</span></div>
+  <div><b>🛡️ Immunology</b><span>Antigens · antibodies · immune responses</span></div>
+  <div><b>⚗️ Industrial Microbiology</b><span>Fermentation · enzymes · downstream processing</span></div>
+ </div>
+</section>
+
+<section class="section about" id="about">
+ <div><span class="eyebrow">ABOUT THE PROJECT</span><h2>A growing reference for microbiology students.</h2>
+ <p>This version is structured so the database can be expanded to hundreds of media. Each entry separates educational information from laboratory SOPs.</p></div>
+ <div class="note"><b>⚠️ Laboratory note</b><p>Formulations, pH, preparation, storage and intended use can vary by manufacturer and validated method. For actual laboratory work, follow the current product insert, institutional SOP and appropriate biosafety procedures.</p></div>
+</section>
+</main>
+<footer>© 2026 MicroMedia Hub · Educational reference · Version 4</footer>
+
+<div id="modal" class="modal"><div class="modalbox"><button id="close" class="close">×</button><div id="detail"></div></div></div>
+<script src="script.js"></script>
+</body></html>
